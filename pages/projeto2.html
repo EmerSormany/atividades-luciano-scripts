@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <style>
+        @charset "UTF-8";
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #3f413d;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #28a745;
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator{
+            background-color: #eae4d3;
+            padding: 3vh 3vh 3vh 3vh;
+            border-radius: 1rem;
+        }
+
+        #display {
+            background-color: #fdf8fd;
+            padding: 15px;
+            border-radius: 0.5rem;
+            text-align: right;
+            height: 5vh;
+            margin: 0.5rem;
+        }
+
+        .calculatorButtons{
+            width: 4rem;
+            height: 3rem;
+            border: none;
+            margin: 0.3rem;
+            border-radius: 0.5rem;
+            background-color: #fef9ff;
+            box-shadow: 0 4px #cac5b6;
+            text-align: center;
+        }
+
+        .calculatorButtons:active {
+            transform: translateY(0.1vh);
+            box-shadow: 0 2px #cac5b6;
+        }
+
+        #cleanDisplay, #deleteDigit, #division, #multiplication, #subtraction, #sum, #result{
+            background-color: #928686;
+            color: #fdfffc;
+        }
+
+        #result{
+            height: 6.8rem;
+        }
+
+        #num0{
+            width: 8.7rem;
+        }
+    </style>
+    <header>
+        <div class="header-container">
+            <img src="../img/download.png" alt="Logo Instituto Federal" class="logo">
+            <div>
+                <h1>Guia de Estudo da Disciplina de Linguagens de Script</h1>
+                <p>Página para reunir os conceitos estudados durante as aulas.</p>
+            </div>
+        </div>
+    </header>
+    <main style="background-color: #28a745;">
+        <div>
+            <h1 style="text-align: center;">Projeto Calculadora</h1>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="calculator">
+                <table>
+                    <tr>
+                        <td colspan="4">
+                            <input type="text" id="display" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="calculatorButtons" id="cleanDisplay" value="C">C</td>
+                        <td><button class="calculatorButtons" id="deleteDigit" value="CE">CE</td>
+                        <td><button class="calculatorButtons" id="division" value="/">&divide;</td>
+                        <td><button class="calculatorButtons" id="multiplication" value="*">&times;</td>
+                    </tr>
+                    <tr>
+                        <td><button class="calculatorButtons" id="num7" value="7">7</td>
+                        <td><button class="calculatorButtons" id="num8" value="8">8</td>
+                        <td><button class="calculatorButtons" id="num9" value="9">9</td>
+                        <td><button class="calculatorButtons" id="subtraction" value="-">-</td>
+                    </tr>
+                    <tr>
+                        <td><button class="calculatorButtons" id="num4" value="4">4</td>
+                        <td><button class="calculatorButtons" id="num5" value="5">5</td>
+                        <td><button class="calculatorButtons" id="num6" value="6">6</td>
+                        <td><button class="calculatorButtons" id="sum" value="+">+</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><button class="calculatorButtons" id="num1" value="1">1</td>
+                        <td><button class="calculatorButtons" id="num2" value="2">2</td>
+                        <td><button class="calculatorButtons" id="num3" value="3">3</td>
+                        <td rowspan="2"><button class="calculatorButtons" id="result" value="=">=</td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="calculatorButtons" id="num0" value="0">0</td>
+                        <td><button class="calculatorButtons" id="point" value=".">.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
